@@ -1,21 +1,19 @@
-import es.uah.matcomp.mp.e1.ejerciciosclases.e3.Employee;
+import es.uah.matcomp.mp.e1.ejerciciosclases.e4.InvoiceItem;
 
 public class Main {
     public static void main(String[] args) {
 // Test constructor and toString()
-        Employee e3 = new Employee(8, "Peter", "Tan", 2500);
-        System.out.println(e3); // toString();
+        InvoiceItem inv1 = new InvoiceItem("A101", "Pen Red", 888, 0.08);
+        System.out.println(inv1); // toString();
 // Test Setters and Getters
-        e3.setSalary(999);
-        System.out.println(e3); // toString();
-        System.out.println("id is: " + e3.getId());
-        System.out.println("firstname is: " + e3.getFirstName());
-        System.out.println("lastname is: " + e3.getLastName());
-        System.out.println("salary is: " + e3.getSalary());
-        System.out.println("name is: " + e3.getName());
-        System.out.println("annual salary is: " + e3.getAnnualSalary()); // Test method
-// Test raiseSalary()
-        System.out.println(e3.raiseSalary(10));
-        System.out.println(e3);
+        inv1.setQty(999);
+        inv1.setUnitPrice(0.99);
+        System.out.println(inv1); // toString();
+        System.out.println("id is: " + inv1.getId());
+        System.out.println("desc is: " + inv1.getDesc());
+        System.out.println("qty is: " + inv1.getQty());
+        System.out.println("unitPrice is: " + inv1.getUnitPrice());
+// Test getTotal()
+        System.out.println("The total is: " + inv1.getTotal());
     }
 }
