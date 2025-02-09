@@ -1,21 +1,21 @@
-import es.uah.matcomp.mp.e1.ejerciciosclases.e2.Rectangle;
+import es.uah.matcomp.mp.e1.ejerciciosclases.e3.Employee;
 
 public class Main {
     public static void main(String[] args) {
-// Test constructors and toString()
-// You need to append a 'f' or 'F' to a float literal
-        Rectangle r1 = new Rectangle(1.2f, 3.4f);
-        System.out.println(r1); // toString()
-        Rectangle r2 = new Rectangle(); // default constructor
-        System.out.println(r2);
-// Test setters and getters
-        r1.setLength(5.6f);
-        r1.setWidth(7.8f);
-        System.out.println(r1); // toString()
-        System.out.println("length is: " + r1.getLength());
-        System.out.println("width is: " + r1.getWidth());
-// Test getArea() and getPerimeter()
-        System.out.printf("area is: %.2f%n", r1.getArea());
-        System.out.printf("perimeter is: %.2f%n", r1.getPerimeter());
+// Test constructor and toString()
+        Employee e3 = new Employee(8, "Peter", "Tan", 2500);
+        System.out.println(e3); // toString();
+// Test Setters and Getters
+        e3.setSalary(999);
+        System.out.println(e3); // toString();
+        System.out.println("id is: " + e3.getId());
+        System.out.println("firstname is: " + e3.getFirstName());
+        System.out.println("lastname is: " + e3.getLastName());
+        System.out.println("salary is: " + e3.getSalary());
+        System.out.println("name is: " + e3.getName());
+        System.out.println("annual salary is: " + e3.getAnnualSalary()); // Test method
+// Test raiseSalary()
+        System.out.println(e3.raiseSalary(10));
+        System.out.println(e3);
     }
 }
